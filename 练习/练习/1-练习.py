@@ -36,4 +36,43 @@ import pyautogui as gui
 # str2 = str1[:3]+'A'+str1[4:]
 # print(str2)
 
-gui.moveTo(x=2667,y=754)
+# gui.moveTo(x=2667,y=754)
+
+# for i in range(10000):
+#   print(i)
+# for i in range(0,10):
+#   print(i)
+# # 0 开始<12条件，每次+3
+# for i in range(0,12,3):
+#   print(i)
+
+# name = 'abcdefg'
+# for i in name:
+#   # print(i)
+#   print(i,end='\t')
+
+# a = ['aa','bb','cc','dd']
+# # for i in range(len(a)):
+# #   print(a[i])
+# for i in a:
+#   print(i)
+
+# i = 0
+# num = 0
+# while i < 100 :
+#   num += i+1
+#   i+=1
+# print(num)
+
+# pass #空语句
+
+# for a in (1,2,3,4,5,6,7,8,9,10):
+#   if a%2 == 0:
+#     pass
+#   else:
+#     print(a)
+
+# for i in range(1,10):
+#   for j in range(1,i+1,):
+#     print('%d*%d=%d '%(i,j,i*j),end=' ')
+#   print('') 
