@@ -1,4 +1,4 @@
-import math 
+import math
 import random
 import pyautogui as gui
 
@@ -10,9 +10,9 @@ import pyautogui as gui
 # test2 = r'\number' # 全部转义
 # test3 = b'number' # 二进制打开
 # test4 = 'number'
-# print(test1) 
-# print(test2) 
-# print(test3) 
+# print(test1)
+# print(test2)
+# print(test3)
 # print('b' in test4)
 
 # print('-'*20)
@@ -51,6 +51,7 @@ import pyautogui as gui
 #   # print(i)
 #   print(i,end='\t')
 
+# list 列表
 # a = ['aa','bb','cc','dd']
 # # for i in range(len(a)):
 # #   print(a[i])
@@ -75,4 +76,41 @@ import pyautogui as gui
 # for i in range(1,10):
 #   for j in range(1,i+1,):
 #     print('%d*%d=%d '%(i,j,i*j),end=' ')
-#   print('') 
+#   print('')
+
+# 切片
+# grops = [1,2,3,4,5,6,7,8,9]
+# print(grops[2:5:2]) => [3,5]
+
+
+# products = [["iphone", 6888], ["MacPro", 14800], ["小米6 ", 2499], ["Coffee", 31], ["Book   ", 60], ["Nike   ", 699]]
+# print('-'*8,' ','商品列表 ','-'*8,end='\n')
+# for i in range(len(products)) :
+#   print(i,'\t',products[i][0],'\t',products[i][1])
+# list1 = []
+# while True:
+#   num = input('请输入商品编号,q退出：')
+#   if num not in ['0','1','2','3','4','5','q']:
+#     print('请正确输入！！')
+#   elif num == 'q':
+#     break
+#   else:
+#     list1.append(products[int(num)])
+# print('退出-结账')
+# print('-'*30,end='\n')
+# for i in range(len(list1)) :
+#   print(i,'\t',list1[i][0],'\t',list1[i][1])
+# print('-'*30,end='\n\n')
+
+# Tuple元组 tup = (part1,) / tup = (part1,part2,part3) 一个元素必须加',' 若不加则为基础数据类型
+# 元组数据不可修改，但可以加入可变对象（列表），或链接两个元组 Tuple1 = Tuple2 + Tuple3
+
+# dict 字典(类似js里的对象)
+# info = {
+#   'name':'白云浩',
+#   'age':18,
+#   'sex':'女'
+# }
+# # print(info['type']) => 报错
+# print(info.get('type')) => None
+# print(info.get('type','没有')) => '没有' #可设默认值
