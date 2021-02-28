@@ -27,4 +27,4 @@ gui.click(x=x,y=y,clicks=2,interval=0.1)
 #发送消息
 gui.typewrite(' ahhhhhhhh',interval=0.1)
 gui.press('space')
-gui.hotkey('alt','s')
+# gui.hotkey('alt','s')
