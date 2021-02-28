@@ -119,7 +119,6 @@ def request(url, data):
 #################百度识图####################################################################################
 
 titleName = input('请输入ID：')
-# titleName = '嘤嘤嘤'
 
 def speak(string1):
     w.OpenClipboard()

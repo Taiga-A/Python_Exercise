@@ -114,3 +114,23 @@ import pyautogui as gui
 # # print(info['type']) => 报错
 # print(info.get('type')) => None
 # print(info.get('type','没有')) => '没有' #可设默认值
+
+def readText():
+    try:
+        f = open('./txt.txt')
+        f.close
+    except FileNotFoundError:
+        print("未发现‘txt.txt’文件,已创建")
+        f = open('./txt.txt','w')
+        f.close()
+        exit()
+    except PermissionError:
+        print("没有‘txt.txt’文件权限,请尝试重新创建")
+        exit()
+
+    with open('./txt.txt','r') as f :
+      data = f.read()
+    return data
+
+text = readText()
+print(text)

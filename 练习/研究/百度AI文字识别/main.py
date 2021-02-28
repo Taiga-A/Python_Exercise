@@ -1,3 +1,5 @@
+import sys
+import pyautogui as gui
 # coding=utf-8
 
 import sys
@@ -100,25 +102,26 @@ def request(url, data):
         print(err)
 
 
+if __name__ == '__main__' :
+    imgUrl = sys.argv[1]
+    # 获取access token
+    token = fetch_token()
 
-# 获取access token
-token = fetch_token()
+    # 拼接通用文字识别高精度url
+    image_url = OCR_URL + "?access_token=" + token
 
-# 拼接通用文字识别高精度url
-image_url = OCR_URL + "?access_token=" + token
+    text = ""
 
-text = ""
+    # 读取书籍页面图片
+    file_content = read_file(imgUrl)
 
-# 读取书籍页面图片
-file_content = read_file('./123.png')
+    # 调用文字识别服务
+    result = request(image_url, urlencode({'image': base64.b64encode(file_content)}))
 
-# 调用文字识别服务
-result = request(image_url, urlencode({'image': base64.b64encode(file_content)}))
+    # 解析返回结果
+    result_json = json.loads(result)
+    for words_result in result_json["words_result"]:
+        text = text + words_result["words"]
 
-# 解析返回结果
-result_json = json.loads(result)
-for words_result in result_json["words_result"]:
-    text = text + words_result["words"]
-
-# 打印文字
-print(text)
+    # 打印文字
+    print(text)
