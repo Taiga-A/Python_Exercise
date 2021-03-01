@@ -30,7 +30,7 @@ def login(keyWord,num):
     response = session.post(login_url, data=login_data, headers=headers,verify=False)
     # 登录页面
     getPic(session,num,keyWord)
-    # 获取图片，前5页
+    # 获取图片
 
 
 '''
